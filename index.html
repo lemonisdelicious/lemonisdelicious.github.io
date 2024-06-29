@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공간 대여</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            box-sizing: border-box;
+        }
+
+        iframe {
+            border: 0;
+            width: 100%;
+            height: 50vh; /* 캘린더와 폼이 화면을 절반씩 차지하도록 설정 */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px; /* 최대 너비를 설정하여 너무 넓지 않게 제한 */
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-  <p>Hello, World!</p>
+    <div class="container">
+        <h1>공간 대여</h1>
+        <!-- 구글 캘린더 임베드 -->
+        <div id="google-calendar">
+            <iframe src="https://calendar.google.com/calendar/embed?src=ceb74ea80c1d395035ad5c761050993caa6c964166086c35f20adf8f3403255d%40group.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
+        </div>
+        <!-- 구글 폼 임베드 -->
+        <div id="google-form">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe0jRrJH2-T2Cpa0oMck4HqfpG4uB2GsI05baYuziHnnEmE8Q/viewform?embedded=true">로드 중...</iframe>
+        </div>
+    </div>
 </body>
 </html>
